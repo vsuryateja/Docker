@@ -1,0 +1,13 @@
+version: '3'
+services:
+  helloworld:
+    image: vsuryateja/hello-world:1-0-0-SNAPSHOT
+    container_name: hello_world
+    ports:
+      - "8088:8080"
+    volumes:
+      - webapps:/usr/local/tomcat/webapps
+volumes:
+  webapps:
+
+#check the path of webapps in using 'docker inspect hello_world' in Mounts 
