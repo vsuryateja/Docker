@@ -1,0 +1,17 @@
+version: '3'
+services:
+  webserver1:
+    image: nginx:latest
+    container_name: nginx_web
+    ports:
+      - "8081:80"
+  webserver2:
+    image: httpd:latest
+    container_name: apache2web
+    ports:
+      - "8082:80"
+  jenkins:
+    image: jenkins:latest
+    container_name: jenkins_ci
+    ports:
+      - "8080:8080"
